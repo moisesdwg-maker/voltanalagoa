@@ -214,6 +214,190 @@
     @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:560px){.gallery-grid{grid-template-columns:1fr}.gallery-item img{height:auto}}
     
+  
+    .route-section{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 10%,rgba(21,216,255,.16),transparent 32%),
+        linear-gradient(180deg,#f5fbff 0%,#eaf6ff 100%);
+    }
+    .route-wrap{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:42px;
+      align-items:center;
+    }
+    .route-card{
+      position:relative;
+      border-radius:30px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #d9ebf8;
+      box-shadow:0 28px 70px rgba(0,67,117,.18);
+    }
+    .route-card img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .route-label{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(4,22,43,.88);
+      color:#fff;
+      font-weight:900;
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .route-copy h2{
+      margin:10px 0 16px;
+      font-size:clamp(2.3rem,5vw,4rem);
+      line-height:.98;
+      letter-spacing:-.05em;
+    }
+    .route-copy p{
+      color:var(--muted);
+      line-height:1.75;
+      font-size:1.05rem;
+    }
+    .route-points{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin:26px 0;
+    }
+    .route-point{
+      background:#fff;
+      border:1px solid #dcecf8;
+      border-radius:18px;
+      padding:16px;
+      font-weight:800;
+      box-shadow:0 10px 30px rgba(0,50,90,.08);
+    }
+    .route-point strong{
+      display:block;
+      color:#005ead;
+      font-size:1.05rem;
+      margin-bottom:3px;
+    }
+    .route-point span{
+      display:block;
+      color:#6b7f96;
+      font-size:.9rem;
+      font-weight:650;
+    }
+    .route-quote{
+      margin-top:18px;
+      padding:18px 20px;
+      border-left:4px solid var(--orange);
+      background:rgba(255,138,0,.08);
+      border-radius:0 16px 16px 0;
+      font-weight:800;
+      color:#23425f;
+    }
+    @media(max-width:900px){
+      .route-wrap{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .route-points{grid-template-columns:1fr}
+      .route-label{font-size:.82rem}
+    }
+
+  
+    .route-tabs{
+      display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
+      margin:-10px 0 38px;
+    }
+    .route-tab{
+      border:1px solid #cfe4f3;background:#fff;color:#0b365e;
+      padding:13px 22px;border-radius:999px;font-weight:900;font-size:1rem;
+      cursor:pointer;transition:.2s ease;box-shadow:0 8px 24px rgba(0,60,110,.08);
+    }
+    .route-tab:hover{transform:translateY(-2px);border-color:#62c9ef}
+    .route-tab.active{
+      color:#fff;border-color:transparent;
+      background:linear-gradient(135deg,#0077d8,#00bfe8);
+      box-shadow:0 12px 30px rgba(0,119,216,.25);
+    }
+    .route-panel{display:none}
+    .route-panel.active{display:block;animation:routeFade .3s ease}
+    .route-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    @keyframes routeFade{
+      from{opacity:0;transform:translateY(8px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    
+  
+    .trophy-showcase{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 18% 18%,rgba(21,216,255,.16),transparent 32%),
+        radial-gradient(circle at 85% 25%,rgba(255,138,0,.12),transparent 28%),
+        linear-gradient(180deg,#07182d 0%,#0a2f58 100%);
+      color:#fff;
+    }
+    .trophy-showcase .section-head p{color:#c4d8e8}
+    .trophy-feature{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:46px;
+      align-items:center;
+    }
+    .trophy-visual{
+      position:relative;
+      border-radius:32px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.13);
+      box-shadow:0 28px 80px rgba(0,0,0,.32);
+      background:#07182d;
+    }
+    .trophy-visual img{width:100%;height:auto;display:block}
+    .trophy-glow{
+      position:absolute;inset:auto 24px 24px 24px;
+      padding:14px 18px;border-radius:18px;
+      background:rgba(2,13,25,.78);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:900;color:#fff
+    }
+    .trophy-copy-dark h2{
+      margin:8px 0 16px;
+      font-size:clamp(2.3rem,5vw,4.2rem);
+      line-height:.98;
+      letter-spacing:-.05em;
+    }
+    .trophy-copy-dark p{
+      color:#c4d8e8;
+      line-height:1.75;
+      font-size:1.05rem;
+    }
+    .trophy-benefits{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0;
+    }
+    .trophy-benefits div{
+      padding:16px;border-radius:18px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.09);
+      font-weight:800;
+    }
+    .trophy-note{
+      margin-top:18px;padding:18px 20px;border-radius:18px;
+      background:rgba(255,138,0,.1);
+      border:1px solid rgba(255,138,0,.22);
+      color:#ffe4b8;font-weight:800;
+    }
+    @media(max-width:900px){
+      .trophy-feature{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .trophy-benefits{grid-template-columns:1fr}
+    }
+    
   </style>
 </head>
 <body>
@@ -227,6 +411,7 @@
         <a href="#kits">Kits</a>
         <a href="#premium">Kit Premium</a>
         <a href="#trofeu">Troféu</a>
+        <a href="#percurso">Percursos</a>
         <a href="#galeria">Galeria</a>
         <a class="btn btn-primary nav-cta" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Inscrição oficial</a>
       </nav>
@@ -251,6 +436,7 @@
           <div class="event-strip">
             <div class="event-pill">📅 31 de dezembro</div>
             <div class="event-pill">🏃 5 km e 15 km</div>
+            <div class="event-pill">🗺️ Percurso 15 km disponível</div>
             <div class="event-pill">🚶 Caminhada 3 km</div>
           </div>
         </div>
@@ -342,29 +528,125 @@
       </div>
     </section>
 
-    <section id="trofeu">
-      <div class="container trophy-grid">
-        <div>
-          <img src="assets/trofeu.png" alt="Troféu da 4ª Volta da Lagoa Saquarema" />
+    
+    <section class="trophy-showcase" id="trofeu">
+      <div class="container">
+        <div class="section-head">
+          <small style="color:#60dcff">Troféu oficial</small>
+          <h2>Uma conquista com a identidade de Saquarema.</h2>
+          <p>O troféu da 4ª Volta da Lagoa transforma o resultado da prova em uma lembrança marcante da cidade e do evento.</p>
         </div>
-        <div class="trophy-copy">
-          <small style="color:#006ecf;font-weight:900;text-transform:uppercase;letter-spacing:.1em">4ª edição</small>
-          <h2>Um troféu com a cara de Saquarema.</h2>
-          <p>
-            O design valoriza a identidade da prova e referências visuais da cidade, transformando a conquista
-            em uma lembrança especial para quem cruzar a linha de chegada entre os destaques da prova.
-          </p>
-          <div class="stats">
-            <div class="stat"><strong>5 km</strong><span>Corrida</span></div>
-            <div class="stat"><strong>15 km</strong><span>Corrida</span></div>
-            <div class="stat"><strong>3 km</strong><span>Caminhada</span></div>
+
+        <div class="trophy-feature">
+          <div class="trophy-visual">
+            <img src="assets/trofeu_destaque.jpg" alt="Troféu oficial da 4ª Volta da Lagoa em Saquarema">
+            <div class="trophy-glow">🏆 Troféu oficial • 4ª Volta da Lagoa</div>
+          </div>
+
+          <div class="trophy-copy-dark">
+            <span class="kicker">4ª edição • Saquarema - RJ</span>
+            <h2>Troféu com <span class="accent">design exclusivo</span> e referência à cidade.</h2>
+            <p>
+              A peça destaca a identidade visual da Volta da Lagoa, com elementos inspirados em Saquarema
+              e acabamento que valoriza a conquista dos atletas premiados.
+            </p>
+
+            <div class="trophy-benefits">
+              <div>🏅 Peça temática da prova</div>
+              <div>⛪ Referências de Saquarema</div>
+              <div>✨ Visual premium</div>
+              <div>📸 Destaque para fotos de pódio</div>
+            </div>
+
+            <div class="trophy-note">
+              A imagem enviada apresenta o modelo com identificação de colocação no pódio.
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px">
+              <a class="btn btn-primary" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">
+                Inscrição oficial
+              </a>
+              <a class="btn whatsapp" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site." target="_blank" rel="noopener">
+                💬 Comprar sem taxa
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    
-    <section id="galeria">
+<section class="route-section" id="percurso">
+      <div class="container">
+        <div class="section-head">
+          <small>Percursos da prova</small>
+          <h2>Escolha seu desafio</h2>
+          <p>Confira os mapas dos percursos de 5 km e 15 km da Volta da Lagoa 2026.</p>
+        </div>
+
+        <div class="route-tabs" role="tablist" aria-label="Percursos">
+          <button class="route-tab active" type="button" data-route="route5">🏃 Percurso 5 km</button>
+          <button class="route-tab" type="button" data-route="route15">🔥 Percurso 15 km</button>
+        </div>
+
+        <div class="route-panel active" id="route5">
+          <div class="route-wrap">
+            <div class="route-card">
+              <img src="assets/percurso_5km.jfif" alt="Mapa do percurso de 5 km da Volta da Lagoa 2026 em Saquarema">
+              <div class="route-label">Percurso • 5 km</div>
+            </div>
+            <div class="route-copy">
+              <small style="color:#006ecf;font-weight:900;text-transform:uppercase;letter-spacing:.1em">Percurso de 5 km</small>
+              <h2>5 km de <span style="color:#006ecf">puro desafio.</span></h2>
+              <p>
+                O percurso de 5 km tem trajeto de ida e volta, com largada e chegada na região do Gravatá
+                e ponto de retorno indicado no mapa oficial.
+              </p>
+              <div class="route-points">
+                <div class="route-point"><strong>🏁 Largada e chegada</strong><span>Gravatá</span></div>
+                <div class="route-point"><strong>↩️ Ida e volta</strong><span>Ponto de retorno sinalizado</span></div>
+                <div class="route-point"><strong>🌊 Cenário</strong><span>Margens da Lagoa de Saquarema</span></div>
+                <div class="route-point"><strong>🏃 5 km</strong><span>Distância rápida e desafiadora</span></div>
+              </div>
+              <div class="route-quote">Esporte, natureza e bem-estar em Saquarema.</div>
+              <div class="route-actions">
+                <a class="btn btn-primary" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Inscrição oficial</a>
+                <a class="btn whatsapp" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site." target="_blank" rel="noopener">💬 Comprar sem taxa</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="route-panel" id="route15">
+          <div class="route-wrap">
+            <div class="route-card">
+              <img src="assets/percurso_15km.jfif" alt="Mapa do percurso de 15 km da Volta da Lagoa 2026 em Saquarema">
+              <div class="route-label">Percurso • 15 km</div>
+            </div>
+            <div class="route-copy">
+              <small style="color:#006ecf;font-weight:900;text-transform:uppercase;letter-spacing:.1em">Percurso de 15 km</small>
+              <h2>A volta completa pela <span style="color:#006ecf">Lagoa de Saquarema.</span></h2>
+              <p>
+                O percurso de 15 km contorna a Lagoa de Saquarema, passando por diferentes regiões da cidade
+                e combinando distância, paisagens e o desafio principal da prova.
+              </p>
+              <div class="route-points">
+                <div class="route-point"><strong>🏁 Largada e chegada</strong><span>Região do Gravatá</span></div>
+                <div class="route-point"><strong>🔄 Volta completa</strong><span>Contorno da lagoa</span></div>
+                <div class="route-point"><strong>📸 Paisagens</strong><span>Pontos marcantes de Saquarema</span></div>
+                <div class="route-point"><strong>🔥 15 km</strong><span>Desafio principal da prova</span></div>
+              </div>
+              <div class="route-quote">Mais que uma corrida, uma experiência.</div>
+              <div class="route-actions">
+                <a class="btn btn-primary" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Inscrição oficial</a>
+                <a class="btn whatsapp" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site." target="_blank" rel="noopener">💬 Comprar sem taxa</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="galeria">
       <div class="container">
         <div class="section-head">
           <small>Imagens do evento</small>
@@ -374,7 +656,7 @@
         <div class="gallery-grid">
           <figure class="gallery-item"><img src="assets/divulgacao.png" alt="Divulgação da Volta da Lagoa 2026"><figcaption>Divulgação oficial</figcaption></figure>
           <figure class="gallery-item"><img src="assets/kit_premium.png" alt="Kit Premium da Volta da Lagoa 2026"><figcaption>Kit Premium</figcaption></figure>
-          <figure class="gallery-item"><img src="assets/trofeu.png" alt="Troféu da Volta da Lagoa 2026"><figcaption>Troféu da 4ª edição</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/trofeu_destaque.jpg" alt="Troféu da Volta da Lagoa 2026"><figcaption>Troféu oficial da 4ª edição</figcaption></figure>
           <figure class="gallery-item contain"><img src="assets/precos_basico.png" alt="Valores do Kit Básico"><figcaption>Valores do Kit Básico</figcaption></figure>
           <figure class="gallery-item contain"><img src="assets/precos_completo.png" alt="Valores do Kit Completo"><figcaption>Valores do Kit Completo</figcaption></figure>
           <figure class="gallery-item contain"><img src="assets/precos_premium.png" alt="Valor do Kit Premium"><figcaption>Valor do Kit Premium</figcaption></figure>
@@ -408,5 +690,21 @@
       Volta da Lagoa 2026 • Saquarema - RJ • Inscrição oficial pelo Esporte Corrida • Compra direta sem taxa com Danila Chaves.
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.route-tab').forEach(function(button){
+      button.addEventListener('click', function(){
+        document.querySelectorAll('.route-tab').forEach(function(tab){
+          tab.classList.remove('active');
+        });
+        document.querySelectorAll('.route-panel').forEach(function(panel){
+          panel.classList.remove('active');
+        });
+        button.classList.add('active');
+        document.getElementById(button.dataset.route).classList.add('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
