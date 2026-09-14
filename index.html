@@ -398,6 +398,42 @@
       .trophy-benefits{grid-template-columns:1fr}
     }
     
+  
+    .rules-section{
+      background:linear-gradient(180deg,#f4faff 0%,#ffffff 100%);
+    }
+    .rules-shell{
+      max-width:980px;margin:auto;background:#fff;border:1px solid #dcecf8;
+      border-radius:30px;box-shadow:var(--shadow);overflow:hidden;
+    }
+    .rules-summary{
+      padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+      background:linear-gradient(135deg,#061a33,#0b3768);color:#fff;
+    }
+    .rules-summary div{
+      padding:15px;border-radius:17px;background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.09);
+    }
+    .rules-summary strong{display:block;color:#5ee6ff;margin-bottom:4px}
+    .rules-body{padding:28px}
+    .rule-item{
+      border:1px solid #e0edf6;border-radius:18px;margin-bottom:12px;
+      overflow:hidden;background:#fff;
+    }
+    .rule-item summary{
+      cursor:pointer;list-style:none;padding:18px 20px;font-weight:900;
+      color:#0a3763;display:flex;align-items:center;justify-content:space-between;
+    }
+    .rule-item summary::-webkit-details-marker{display:none}
+    .rule-item summary:after{content:"+";font-size:1.45rem;color:#0087c9}
+    .rule-item[open] summary:after{content:"–"}
+    .rule-content{padding:0 20px 20px;color:#526b84;line-height:1.7}
+    .rule-content ul{margin:4px 0 0;padding-left:20px}
+    .rule-content li{margin:7px 0}
+    .rules-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    @media(max-width:800px){.rules-summary{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.rules-summary{grid-template-columns:1fr}.rules-body{padding:18px}}
+
   </style>
 </head>
 <body>
@@ -413,6 +449,7 @@
         <a href="#trofeu">Troféu</a>
         <a href="#percurso">Percursos</a>
         <a href="#galeria">Galeria</a>
+        <a href="#regulamento">Regulamento</a>
         <a class="btn btn-primary nav-cta" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Inscrição oficial</a>
       </nav>
     </div>
@@ -664,6 +701,116 @@
       </div>
     </section>
     
+
+    
+    <section class="rules-section" id="regulamento">
+      <div class="container">
+        <div class="section-head">
+          <small>Informações oficiais</small>
+          <h2>Regulamento da 4ª Volta da Lagoa</h2>
+          <p>Consulte abaixo as principais regras, horários, premiação e responsabilidades para participação no evento.</p>
+        </div>
+
+        <div class="rules-shell">
+          <div class="rules-summary">
+            <div><strong>📅 Data</strong>31/12/2026</div>
+            <div><strong>⏰ Largada</strong>A partir de 7h</div>
+            <div><strong>📍 Local</strong>Praça do Bem Estar</div>
+            <div><strong>📝 Inscrições</strong>Até 28/12 ou esgotar</div>
+          </div>
+
+          <div class="rules-body">
+            <details class="rule-item" open>
+              <summary>1. Informações gerais</summary>
+              <div class="rule-content"><ul>
+                <li>Data: 31 de dezembro de 2026.</li>
+                <li>Distâncias: corrida de 15 km, corrida e caminhada de 5 km e caminhada de 4 km.</li>
+                <li>Largada e chegada: Praça do Bem Estar – Saquarema/RJ.</li>
+                <li>Horário da largada: a partir de 7h.</li>
+                <li>Inscrições até 28/12/2026 ou até o esgotamento das vagas.</li>
+                <li>Local e datas para retirada dos kits serão divulgados posteriormente pela organização.</li>
+              </ul></div>
+            </details>
+
+            <details class="rule-item">
+              <summary>2. Sobre a prova</summary>
+              <div class="rule-content"><ul>
+                <li>Prova de corrida de rua de 15 km, corrida de 5 km e caminhada de 4 km, organizada pela Saquatrilhas.</li>
+                <li>Idade mínima: 14 anos completos até 28/12/2026.</li>
+                <li>Inscrições pelo site oficial Esporte Corrida.</li>
+                <li>Inscrições em equipe: somente via contato com a organização — (22) 98147-6754, Fábio.</li>
+                <li>Duração máxima da prova: 2h30.</li>
+                <li>O número do atleta é pessoal e intransferível.</li>
+                <li>Não será permitida mudança de categoria após a inscrição.</li>
+              </ul></div>
+            </details>
+
+            <details class="rule-item">
+              <summary>3. Retirada de kits</summary>
+              <div class="rule-content"><ul>
+                <li>Locais, datas e horários serão divulgados posteriormente.</li>
+                <li>Não haverá entrega de kits no dia do evento, salvo orientação específica da organização.</li>
+                <li>Kit composto por camiseta, sacola, número de peito e medalha de participação.</li>
+                <li>Retirada mediante protocolo de inscrição, recibo e documento.</li>
+              </ul></div>
+            </details>
+
+            <details class="rule-item">
+              <summary>4. Chip de cronometragem</summary>
+              <div class="rule-content"><ul>
+                <li>Chip descartável entregue junto ao kit.</li>
+                <li>Uso obrigatório durante a prova.</li>
+                <li>Atletas sem chip serão desclassificados.</li>
+                <li>O chip deve ser descartado após a prova.</li>
+              </ul></div>
+            </details>
+
+            <details class="rule-item">
+              <summary>5. Premiação</summary>
+              <div class="rule-content"><ul>
+                <li>Geral individual: 1º ao 5º lugares, masculino e feminino, nas provas de 15 km e 5 km.</li>
+                <li>Faixa etária: 1º, 2º e 3º masculino e feminino.</li>
+                <li>Faixas: 14–19, 20–25, 26–30, 31–35, 36–40, 41–45, 46–50, 51–55, 56–60, 61–65 e 66+.</li>
+              </ul></div>
+            </details>
+
+            <details class="rule-item">
+              <summary>6. Regulamento geral</summary>
+              <div class="rule-content"><ul>
+                <li>Chegar com 1 hora de antecedência e respeitar o trajeto oficial.</li>
+                <li>Número de peito obrigatório e sem danos.</li>
+                <li>Assistência médica disponível com ambulâncias e segurança por órgãos competentes.</li>
+                <li>Sanitários e guarda-volumes disponíveis; não deixar objetos de valor.</li>
+                <li>Itens não retirados do guarda-volumes ficarão por 3 dias com a organização.</li>
+                <li>A organização não se responsabiliza por extravios.</li>
+                <li>A prova ocorrerá em qualquer clima, salvo situação de risco grave.</li>
+                <li>A organização poderá alterar o regulamento por meio do site oficial.</li>
+              </ul></div>
+            </details>
+
+            <details class="rule-item">
+              <summary>7. Termo de responsabilidade</summary>
+              <div class="rule-content"><ul>
+                <li>Os dados fornecidos são de responsabilidade do atleta.</li>
+                <li>Ao participar, o atleta declara estar de acordo com o regulamento e em boas condições de saúde.</li>
+                <li>A participação ocorre por livre e espontânea vontade, assumindo as responsabilidades pertinentes.</li>
+                <li>O participante cede o uso de sua imagem para divulgação do evento.</li>
+                <li>Despesas pessoais são de responsabilidade do participante.</li>
+                <li>Não haverá ressarcimento em caso de cancelamento ou alteração da data.</li>
+                <li>É proibido portar material político ou publicitário sem autorização.</li>
+                <li>O participante deve acompanhar os comunicados via e-mail e site oficial.</li>
+              </ul></div>
+            </details>
+
+            <div class="rules-actions">
+              <a class="btn btn-primary" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Fazer inscrição</a>
+              <a class="btn whatsapp" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site." target="_blank" rel="noopener">💬 Comprar sem taxa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="cta" id="contato">
       <div class="container">
