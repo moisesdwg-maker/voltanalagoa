@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volta da Lagoa 2026 - Saquarema/RJ. Corrida de 5 km e 15 km e caminhada de 3 km. Inscrições e kits direto pelo WhatsApp." />
+  <meta name="theme-color" content="#061a33" />
+  <title>Volta da Lagoa 2026 | Saquarema - RJ</title>
+  <style>
+    :root{
+      --navy:#061a33;
+      --navy2:#0b2c54;
+      --blue:#006ecf;
+      --cyan:#15d8ff;
+      --orange:#ff8a00;
+      --light:#f5fbff;
+      --white:#fff;
+      --text:#10243b;
+      --muted:#5f7390;
+      --shadow:0 22px 60px rgba(0,31,67,.18);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#f7fbff 0%,#eef8ff 100%);
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(4,20,39,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#fff}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+    .brand-badge{
+      width:40px;height:40px;border-radius:50%;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--cyan),var(--blue));
+      color:#03172b;font-weight:1000;
+      box-shadow:0 0 24px rgba(21,216,255,.35);
+    }
+    .navlinks{display:flex;gap:22px;align-items:center;font-size:.95rem}
+    .navlinks a{opacity:.82}
+    .navlinks a:hover{opacity:1;color:var(--cyan)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 20px;border-radius:14px;font-weight:850;
+      transition:.2s ease;border:0;cursor:pointer;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#20e1ff,#0075d8);
+      color:#041829;box-shadow:0 12px 35px rgba(0,117,216,.3);
+    }
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+    .btn-outline{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.05)}
+    .hero{
+      min-height:720px;
+      position:relative;display:grid;align-items:center;overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(3,16,33,.96) 0%,rgba(3,16,33,.87) 42%,rgba(3,16,33,.36) 72%,rgba(3,16,33,.22) 100%),
+        url("assets/divulgacao.png") center 32%/cover no-repeat;
+      color:#fff;
+    }
+    .hero:after{
+      content:"";position:absolute;inset:auto 0 0;height:160px;
+      background:linear-gradient(transparent,#eef8ff);
+      pointer-events:none;
+    }
+    .hero-content{position:relative;z-index:2;padding:84px 0 140px;max-width:720px}
+    .kicker{
+      display:inline-flex;align-items:center;gap:9px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(19,216,255,.13);
+      border:1px solid rgba(19,216,255,.28);
+      color:#9befff;font-weight:800;font-size:.85rem;
+      text-transform:uppercase;letter-spacing:.08em
+    }
+    .hero h1{
+      margin:20px 0 16px;
+      font-size:clamp(3rem,7vw,6.5rem);
+      line-height:.88;letter-spacing:-.055em;text-transform:uppercase;
+    }
+    .hero h1 span{color:var(--cyan)}
+    .hero p{font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.7;color:#d8e9f7;max-width:620px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .event-strip{
+      margin-top:34px;display:flex;gap:14px;flex-wrap:wrap
+    }
+    .event-pill{
+      padding:11px 14px;border-radius:14px;
+      background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);
+      font-weight:700;color:#f7fbff
+    }
+
+    section{padding:86px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+    .section-head small{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+    .section-head h2{font-size:clamp(2rem,5vw,3.4rem);margin:10px 0 12px;letter-spacing:-.04em}
+    .section-head p{color:var(--muted);line-height:1.7;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{
+      background:#fff;border:1px solid #dcecf8;border-radius:var(--radius);
+      padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    }
+    .card.featured{
+      transform:translateY(-10px);
+      background:linear-gradient(160deg,#071c37,#0a3260);
+      color:#fff;border-color:#0b5a99;
+    }
+    .badge{
+      position:absolute;top:18px;right:18px;
+      padding:7px 10px;border-radius:999px;font-size:.73rem;font-weight:900;
+      background:var(--orange);color:#102035;text-transform:uppercase;
+    }
+    .kit-icon{
+      width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
+      font-size:1.55rem;background:#eaf8ff;margin-bottom:25px
+    }
+    .featured .kit-icon{background:rgba(21,216,255,.12)}
+    .card h3{font-size:1.35rem;margin:0 0 8px}
+    .price{font-size:3rem;font-weight:950;color:#0057a3;letter-spacing:-.04em;margin:14px 0}
+    .featured .price{color:var(--cyan)}
+    .price small{font-size:.92rem;font-weight:800;letter-spacing:0}
+    .note{color:var(--muted);font-size:.92rem;line-height:1.55}
+    .featured .note{color:#b8d4ea}
+    .kit-list{list-style:none;padding:0;margin:23px 0 26px}
+    .kit-list li{padding:9px 0;border-bottom:1px solid #e7f0f7;display:flex;gap:9px;align-items:flex-start}
+    .featured .kit-list li{border-bottom-color:rgba(255,255,255,.1)}
+    .kit-list li:before{content:"✓";color:#02a4d8;font-weight:1000}
+    .featured .kit-list li:before{color:var(--cyan)}
+    .card .btn{width:100%}
+    .senior{
+      margin-top:16px;padding:12px 14px;border-radius:14px;background:#f4f9fd;color:#173b5f;font-weight:800;font-size:.92rem;
+    }
+    .featured .senior{background:rgba(255,255,255,.08);color:#d7edf9}
+
+    .premium-section{background:linear-gradient(180deg,#06182e 0%,#0a2d53 100%);color:#fff}
+    .premium-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+    .premium-image{
+      border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.13);
+      box-shadow:0 30px 80px rgba(0,0,0,.35)
+    }
+    .premium-copy h2{font-size:clamp(2.2rem,5vw,4.2rem);line-height:.96;margin:10px 0 18px;letter-spacing:-.05em}
+    .premium-copy p{color:#c5d8e8;line-height:1.75;font-size:1.05rem}
+    .premium-highlights{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:28px 0}
+    .premium-highlights div{padding:16px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);font-weight:750}
+    .accent{color:var(--cyan)}
+    .orange{color:var(--orange)}
+
+    .trophy-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+    .trophy-grid img{border-radius:28px;box-shadow:var(--shadow);width:100%;max-height:620px;object-fit:cover}
+    .trophy-copy h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.04em;margin:0 0 18px}
+    .trophy-copy p{color:var(--muted);line-height:1.75;font-size:1.05rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+    .stat{background:#fff;border:1px solid #dcecf8;border-radius:18px;padding:18px;text-align:center}
+    .stat strong{display:block;font-size:1.55rem;color:#005ead}
+    .stat span{font-size:.85rem;color:#60758f}
+
+    .cta{
+      padding:70px 0;background:
+      radial-gradient(circle at 15% 20%,rgba(21,216,255,.2),transparent 28%),
+      radial-gradient(circle at 90% 40%,rgba(255,138,0,.18),transparent 24%),
+      #04162b;color:#fff;
+    }
+    .cta-box{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+      padding:38px;border:1px solid rgba(255,255,255,.1);
+      border-radius:30px;background:rgba(255,255,255,.05)
+    }
+    .cta h2{font-size:clamp(2rem,5vw,3.6rem);margin:0 0 12px;letter-spacing:-.045em}
+    .cta p{color:#c6d9e9;line-height:1.65;margin:0}
+    .cta-actions{display:flex;flex-direction:column;gap:12px}
+    .whatsapp{background:#25D366;color:#052414}
+    .whatsapp:hover{filter:brightness(1.06);transform:translateY(-2px)}
+    .phone{font-weight:900;text-align:center;font-size:1.08rem;color:#fff}
+
+    footer{background:#020d19;color:#8eabc3;padding:26px 0;text-align:center;font-size:.9rem}
+
+    @media(max-width:900px){
+      .navlinks a:not(.nav-cta){display:none}
+      .hero{min-height:670px;background-position:62% 30%}
+      .hero-content{padding-top:72px}
+      .cards{grid-template-columns:1fr}
+      .card.featured{transform:none}
+      .premium-grid,.trophy-grid,.cta-box{grid-template-columns:1fr}
+      .trophy-grid img{max-height:none}
+    }
+    @media(max-width:560px){
+      .container{width:min(94%,1160px)}
+      .hero{background-position:66% 34%}
+      .hero h1{font-size:3.4rem}
+      .event-strip{gap:8px}
+      .event-pill{font-size:.86rem}
+      section{padding:64px 0}
+      .card{padding:22px}
+      .price{font-size:2.6rem}
+      .premium-highlights,.stats{grid-template-columns:1fr}
+      .nav{height:64px}
+      .brand span:last-child{font-size:.9rem}
+    }
+  
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery-item{background:#fff;border:1px solid #dcecf8;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+    .gallery-item img{width:100%;height:320px;object-fit:cover}
+    .gallery-item.contain img{object-fit:contain;background:#f8fbfe;padding:10px}
+    .gallery-item figcaption{padding:14px 16px;font-weight:800;color:#173b5f}
+    @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.gallery-grid{grid-template-columns:1fr}.gallery-item img{height:auto}}
+    
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <span class="brand-badge">4ª</span>
+        <span>VOLTA DA LAGOA 2026</span>
+      </a>
+      <nav class="navlinks">
+        <a href="#kits">Kits</a>
+        <a href="#premium">Kit Premium</a>
+        <a href="#trofeu">Troféu</a>
+        <a href="#galeria">Galeria</a>
+        <a class="btn btn-primary nav-cta" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Inscrição oficial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <span class="kicker">Saquarema • RJ</span>
+          <h1>Volta da <span>Lagoa</span> 2026</h1>
+          <p>
+            Feche o ano correndo em um dos cenários mais marcantes de Saquarema.
+            Escolha seu kit e faça sua inscrição pelo site oficial. Se preferir adquirir diretamente, sem a taxa do site,
+            fale com <strong>Danila Chaves pelo WhatsApp</strong>.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748" target="_blank" rel="noopener">Inscrição oficial</a>
+            <a class="btn btn-outline" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site." target="_blank" rel="noopener">Comprar sem taxa</a>
+          </div>
+          <div class="event-strip">
+            <div class="event-pill">📅 31 de dezembro</div>
+            <div class="event-pill">🏃 5 km e 15 km</div>
+            <div class="event-pill">🚶 Caminhada 3 km</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kits">
+      <div class="container">
+        <div class="section-head">
+          <small>Escolha seu kit</small>
+          <h2>Escolha o kit e faça sua inscrição</h2>
+          <p>Use o botão de cada kit para se inscrever no site oficial. Para adquirir diretamente sem a taxa do site, fale com Danila Chaves pelo WhatsApp.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="kit-icon">⚡</div>
+            <h3>Kit Básico</h3>
+            <div class="price"><small>R$</small> 110,00</div>
+            <div class="note">Público geral</div>
+            <ul class="kit-list">
+              <li>Opção de entrada mais econômica</li>
+              <li>Inscrição pelo site oficial do evento</li>
+              <li>Opção de compra direta sem taxa via WhatsApp</li>
+            </ul>
+            <div class="senior">Idoso: <strong>R$ 55,00</strong></div>
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://esportecorrida.com.br/v3/inscricao_lm.php?categoria_id=9324&evt=2748">Inscrever no Kit Básico</a>
+            <a class="btn" style="margin-top:10px;background:#25D366;color:#052414" target="_blank" rel="noopener" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site.">Comprar sem taxa no WhatsApp</a>
+          </article>
+
+          <article class="card">
+            <div class="kit-icon">🏃</div>
+            <h3>Kit Completo</h3>
+            <div class="price"><small>R$</small> 130,00</div>
+            <div class="note">Público geral</div>
+            <ul class="kit-list">
+              <li>Mais itens para sua experiência</li>
+              <li>Inscrição pelo site oficial do evento</li>
+              <li>Opção de compra direta sem taxa via WhatsApp</li>
+            </ul>
+            <div class="senior">Idoso: <strong>R$ 65,00</strong></div>
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://esportecorrida.com.br/v3/inscricao_lm.php?categoria_id=9326&evt=2748">Inscrever no Kit Completo</a>
+            <a class="btn" style="margin-top:10px;background:#25D366;color:#052414" target="_blank" rel="noopener" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site.">Comprar sem taxa no WhatsApp</a>
+          </article>
+
+          <article class="card featured">
+            <span class="badge">Destaque</span>
+            <div class="kit-icon">🏆</div>
+            <h3>Kit Premium</h3>
+            <div class="price"><small>R$</small> 170,00</div>
+            <div class="note">Público geral • edição especial</div>
+            <ul class="kit-list">
+              <li>Experiência premium da Volta da Lagoa</li>
+              <li>Kit visual exclusivo do evento</li>
+              <li>Sem taxa adicional do site</li>
+            </ul>
+            <div class="senior">Lote promocional: <strong>150 kits</strong></div>
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://esportecorrida.com.br/v3/inscricao_lm.php?categoria_id=9512&evt=2748">Inscrever no Kit Premium</a>
+            <a class="btn" style="margin-top:10px;background:#25D366;color:#052414" target="_blank" rel="noopener" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site.">Comprar sem taxa no WhatsApp</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-section" id="premium">
+      <div class="container premium-grid">
+        <div class="premium-image">
+          <img src="assets/kit_premium.png" alt="Divulgação do Kit Premium Volta da Lagoa 2026" />
+        </div>
+        <div class="premium-copy">
+          <span class="kicker">Kit Premium</span>
+          <h2>Mais que uma corrida, <span class="accent">uma experiência.</span></h2>
+          <p>
+            Uma apresentação visual especial inspirada em Saquarema, na lagoa e em seus cartões-postais.
+            O Kit Premium ganha destaque com identidade esportiva em azul, detalhes vibrantes e itens exclusivos.
+          </p>
+          <div class="premium-highlights">
+            <div>💙 Identidade visual exclusiva</div>
+            <div>🏅 Medalha temática</div>
+            <div>👕 Camisa do evento</div>
+            <div>🧢 Acessórios especiais</div>
+          </div>
+          <p><strong class="orange">R$ 170,00</strong> — inscrição disponível no site oficial. Para adquirir diretamente sem a taxa do site, fale com Danila.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px">
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://esportecorrida.com.br/v3/inscricao_lm.php?categoria_id=9512&evt=2748">Inscrever no site</a>
+            <a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site.">💬 Comprar sem taxa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trofeu">
+      <div class="container trophy-grid">
+        <div>
+          <img src="assets/trofeu.png" alt="Troféu da 4ª Volta da Lagoa Saquarema" />
+        </div>
+        <div class="trophy-copy">
+          <small style="color:#006ecf;font-weight:900;text-transform:uppercase;letter-spacing:.1em">4ª edição</small>
+          <h2>Um troféu com a cara de Saquarema.</h2>
+          <p>
+            O design valoriza a identidade da prova e referências visuais da cidade, transformando a conquista
+            em uma lembrança especial para quem cruzar a linha de chegada entre os destaques da prova.
+          </p>
+          <div class="stats">
+            <div class="stat"><strong>5 km</strong><span>Corrida</span></div>
+            <div class="stat"><strong>15 km</strong><span>Corrida</span></div>
+            <div class="stat"><strong>3 km</strong><span>Caminhada</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <small>Imagens do evento</small>
+          <h2>Volta da Lagoa 2026</h2>
+          <p>Materiais de divulgação dos kits, troféu e prova.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item"><img src="assets/divulgacao.png" alt="Divulgação da Volta da Lagoa 2026"><figcaption>Divulgação oficial</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/kit_premium.png" alt="Kit Premium da Volta da Lagoa 2026"><figcaption>Kit Premium</figcaption></figure>
+          <figure class="gallery-item"><img src="assets/trofeu.png" alt="Troféu da Volta da Lagoa 2026"><figcaption>Troféu da 4ª edição</figcaption></figure>
+          <figure class="gallery-item contain"><img src="assets/precos_basico.png" alt="Valores do Kit Básico"><figcaption>Valores do Kit Básico</figcaption></figure>
+          <figure class="gallery-item contain"><img src="assets/precos_completo.png" alt="Valores do Kit Completo"><figcaption>Valores do Kit Completo</figcaption></figure>
+          <figure class="gallery-item contain"><img src="assets/precos_premium.png" alt="Valor do Kit Premium"><figcaption>Valor do Kit Premium</figcaption></figure>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="cta" id="contato">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="kicker">Inscrição direta</span>
+            <h2>Garanta sua vaga na Volta da Lagoa 2026.</h2>
+            <p>
+              Para inscrição convencional, utilize o <strong>site oficial do evento</strong>. Para adquirir diretamente sem a taxa cobrada pelo site, fale com <strong>Danila Chaves</strong>.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://esportecorrida.com.br/v3/inscricao.php?evt=2748">🏃 Inscrição no site oficial</a>
+            <a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/5522999747283?text=Ol%C3%A1%20Danila!%20Quero%20adquirir%20minha%20inscri%C3%A7%C3%A3o%20da%20Volta%20da%20Lagoa%202026%20diretamente%20com%20voc%C3%AA%2C%20sem%20a%20taxa%20do%20site.">💬 Comprar sem taxa com Danila</a>
+            <div class="phone">+55 22 99974-7283</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Volta da Lagoa 2026 • Saquarema - RJ • Inscrição oficial pelo Esporte Corrida • Compra direta sem taxa com Danila Chaves.
+    </div>
+  </footer>
+</body>
+</html>
